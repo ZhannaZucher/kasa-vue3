@@ -27,47 +27,19 @@ defineProps({
 	align-items: center;
 	position: relative;
 }
-
-.banner__img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	opacity: 0.7;
-	border-radius: 25px;
-}
-
-.banner__title {
-	position: absolute;
-	font-size: 2.75em;
-	font-weight: 500;
-	color: #fff;
-	line-height: 68px;
-}
-
 @media screen and (max-width: 768px) {
 	.banner__title {
 		margin-left: 16px;
 	}
 }
-
 @media screen and (max-width: 576px) {
 	.banner {
 		margin: 0 0 20px 0;
 		border-radius: 10px;
 		justify-content: flex-start;
 	}
-
 	.bannerHome {
 		height: 111px;
-	}
-
-	.banner__img {
-		border-radius: 10px;
-	}
-	.banner__title {
-		font-size: 1.4em;
-		line-height: 24px;
-		width: 70%;
 	}
 }
 </style>
