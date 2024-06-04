@@ -2,7 +2,6 @@
 defineProps({
   home: {
     type: Boolean,
-    required: true, 
     default: false
   }
 })
