@@ -1,5 +1,14 @@
 <script setup>
+import { ref, onMounted} from "vue"
+import dataHousing from "@/data/housing.json"
 import Banner from '@/components/Banner.vue'
+import Card from '@/components/Card.vue'
+
+const data = ref(null)
+
+onMounted(() => {
+	data.value = dataHousing
+})
 </script>
 
 <template>
@@ -8,6 +17,9 @@ import Banner from '@/components/Banner.vue'
           <img class="banner__img" src="@/assets/img-home.jpg" alt="rocks" />
           <h1 class="banner__title">Chez vous, partout et ailleurs</h1>
     </Banner>
+	<section class="housing-content">
+			<Card v-for="accommodation in data" :key="accommodation.id" :accommodation="accommodation"  />
+	</section>
   </main>
 </template>
 
