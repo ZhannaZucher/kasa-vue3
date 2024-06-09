@@ -1,5 +1,6 @@
 <script setup>
 import Collapse from './Collapse.vue';
+import Tag from './Tag.vue';
 
 defineProps({
   accommodation: {
@@ -16,7 +17,7 @@ defineProps({
                 <h1 class="acc-about__label">{{ accommodation.title }}</h1>
                 <h2 class="acc-about__location">{{ accommodation.location }}</h2>
                 <div class="acc-about__tags">
-                    <!-- todo Tag component here -->
+                    <Tag v-for="tag, index in accommodation.tags" :key="index" :content="tag" />
                 </div>
             </div>
             <div class="acc-owner__column">
