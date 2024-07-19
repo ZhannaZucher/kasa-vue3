@@ -1,8 +1,8 @@
 <script setup>
 import { defineProps } from 'vue'
-// import { useRouter } from 'vue-router'
 import dataHousing from "@/data/housing.json"
 import AccommodationDetails from "@/components/AccomodationDetails.vue";
+import Gallery from "@/components/Gallery.vue"
 
 const props = defineProps(['id'])
 
@@ -11,7 +11,7 @@ const accommodation = dataHousing.find((accommodation) => accommodation.id === p
 
 <template>
     <main id="main-accommodation">
-    <!-- todo: Gallery here -->
+		<Gallery :slides="accommodation.pictures"/>
         <AccommodationDetails :accommodation="accommodation" />
     </main>
 </template>
