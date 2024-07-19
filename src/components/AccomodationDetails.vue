@@ -1,6 +1,7 @@
 <script setup>
 import Collapse from './Collapse.vue';
 import Tag from './Tag.vue';
+import Rating from './Rating.vue';
 
 defineProps({
   accommodation: {
@@ -8,6 +9,7 @@ defineProps({
     required: true
   }
 })
+
 </script>
 
 <template>
@@ -31,7 +33,7 @@ defineProps({
                         <img :src="accommodation.host.picture" :alt="accommodation.host.name" />
                     </div>
                 </div>
-                <!-- todo Rating here -->
+                <Rating :scaleValue="accommodation.rating" />
             </div> 
          </div>
         <div class="acc-details">
@@ -48,7 +50,6 @@ defineProps({
           </Collapse>
         </div>
     </section>
-
 </template>
 
 <style scoped>
