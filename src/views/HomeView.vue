@@ -13,7 +13,7 @@ onMounted(() => {
 
 <template>
   <main id="main-home">
-    <Banner :home="true">
+    <Banner home>
           <img class="banner__img" src="@/assets/img-home.jpg" alt="rocks" />
           <h1 class="banner__title">Chez vous, partout et ailleurs</h1>
     </Banner>
